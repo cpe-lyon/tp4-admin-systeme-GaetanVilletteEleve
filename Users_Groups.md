@@ -134,7 +134,9 @@ U3 n'est pas utilisateur de groupe2 on ne peut donc pas le retirer car groupe2 e
 </code></br>
 
 ### à quoi correspond l’utilisateur nobody ?
+L'utilisateur nobody  correspond au nom conventionnel d'un compte d'utilisateur à qui aucun fichier n'appartient, qui n'est dans aucun groupe qui a des privilèges et dont les seules possibilités sont celles que tous les "autres utilisateurs" ont. </br>
 
+### Par défaut, combien de temps la commande sudo conserve-t-elle votre mot de passe en mémoire ? Quelle commande permet de forcer sudo à oublier votre mot de passe ?
 
 
 
