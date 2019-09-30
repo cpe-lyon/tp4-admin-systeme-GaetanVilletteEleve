@@ -129,7 +129,11 @@ U3 n'est pas utilisateur de groupe2 on ne peut donc pas le retirer car groupe2 e
 </code></br>
 
 ### Quel est l’interpréteur de commandes (Shell) de l’utilisateur root ?
+<code>
+ cat /etc/passwd | grep "root" | cut -d: -f7
+</code></br>
 
+### à quoi correspond l’utilisateur nobody ?
 
 
 
