@@ -66,6 +66,67 @@ chgrp groupe2 /home/groupe2
 </code></br>
 
 ### Comment faire pour que, dans ces dossiers, seul le propriétaire d’un fichier ait le droit de renommer ou supprimer ce fichier ?
+<code>
+chmod 1755 /home/groupe1
+</code></br>
+
+### Pouvez-vous vous connecter en tant que u1 ? Pourquoi ?
+<code>
+  su u1
+</code></br>
+Non il est impossible de se connecter en tant que u1 car il n'y a pas de mot de passe pour cet utilisateur.</br>
+
+### Activez le compte de l’utilisateur u1 et vérifiez que vous pouvez désormais vous connecter avec son compte.
+<code>
+  sudo passwd u1
+  new password: *espace*
+  su u1
+</code></br>
+
+### Quels sont l’uid et le gid de u1 ?
+<code>
+id u1
+  uid = 1001
+  gid = 1001
+</code></br>
+
+### Quel utilisateur a pour uid 1003 ?
+<code>
+getent passwd "1003" | cut -d: -f1
+</code></br>
+uid 1003 = u3</br>
+
+### Quel est l’id du groupe groupe1 ?
+<code>
+getent group groupe1 | cut -d: -f1
+</code></br>
+guid du groupe1 = 1001</br>
+
+### Quel groupe a pour guid 1002 ?
+<code>
+getent group "1002" | cut -d: -f1
+</code></br>
+guid 1002 = groupe2
+
+### Retirez l’utilisateur u3 du groupe groupe2. Que se passe-t-il ? Expliquez.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
