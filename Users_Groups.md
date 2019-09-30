@@ -109,9 +109,26 @@ getent group "1002" | cut -d: -f1
 guid 1002 = groupe2
 
 ### Retirez l’utilisateur u3 du groupe groupe2. Que se passe-t-il ? Expliquez.
+<code>
+sudo gpasswd -d u3 groupe2
+</code></br>
+U3 n'est pas utilisateur de groupe2 on ne peut donc pas le retirer car groupe2 est l'unique groupe de u3 et ne peux pas ne pas faire partie d'un groupe.3
 
+### Modifiez le compte de u4 de sorte que :
+— il expire au 1er juin 2020
+— il faut changer de mot de passe avant 90 jours
+— il faut attendre 5 jours pour modifier un mot de passe
+— l’utilisateur est averti 14 jours avant l’expiration de son mot de passe
+— le compte sera bloqué 30 jours après expiration du mot de passe
 
+<code>
+ sudo usermod --expiredate 2020-06-01 u4
+ sudo chage -m 90 u4
+ sudo chage -W 14 u4
+ sudo chage -I 30 u4
+</code></br>
 
+### Quel est l’interpréteur de commandes (Shell) de l’utilisateur root ?
 
 
 
