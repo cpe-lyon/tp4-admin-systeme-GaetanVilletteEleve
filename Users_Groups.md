@@ -154,8 +154,8 @@ Ainsi root à tout les droits sur tout les fichiers meme si ceux-ci sont modifi�
 On voit que l'on peut écrire sur le fichier ainsi il possède au minimum les droits 400.</br>
 
 ### Essayez d’exécuter le fichier. Est-ce que cela fonctionne ? Et avec sudo ? Expliquez.
-On ne peut pas exécuter le fichier car on a pas les droits d'éxécution en tant qu'utilisateur dessus.
-Cependant avec sudo il sera possible de l'éxécuter.
+On ne peut pas exécuter le fichier car on a pas les droits d'éxécution en tant qu'utilisateur dessus.</br>
+Cependant avec sudo il sera possible de l'éxécuter.</br>
 
 ### Placez-vous dans le répertoire test, et retirez-vous le droit en lecture pour ce répertoire. Listez le contenu du répertoire, puis exécutez ou affichez le contenu du fichier fichier. Qu’en déduisez-vous ? Rétablissez le droit en lecture sur test
 <code>sudo chmod u-r ../test
@@ -169,10 +169,10 @@ mkdir sstest
 chmod u-w nouveau
 chmod u-w ../test
 nano nouveau</code></br>
-Il y a une erreur disant que nous ne possedons pas les permissions de modification.
+Il y a une erreur disant que nous ne possedons pas les permissions de modification.</br>
 <code>chmod u+w ../test
 nano nouveau</code>
-Il y a encore la meme erreur disant que nous ne possedons pas les permissions de modification. 
+Il y a encore la meme erreur disant que nous ne possedons pas les permissions de modification. </br>
 <code>rm nouveau
 rm: remove write-protected regular file 'nouveau'? yes
 </code></br>
@@ -192,18 +192,19 @@ Quand nous n'avaons pas les droits en execution pour les répertoires nous ne po
 cd test
 chmod u-x ../test
 touch new</code></br>
-Nous n'avons pas les droits de création de fichier.
+Nous n'avons pas les droits de création de fichier.</br>
 <code>rm fichier</code></br>
-Nous n'avons pas les droits de suppression de fichier.
+Nous n'avons pas les droits de suppression de fichier.</br>
 <code>nano fichier</code></br>
-Nous ne pouvons pas sauvegarder les changements du fichier fichier
+Nous ne pouvons pas sauvegarder les changements du fichier fichier</br>
 
-cd sstest
-Il est impossible d'accéder à sstest
+<code>cd sstest</code></br>
+Il est impossible d'accéder à sstest</br>
 
-ls sstest
+<code>ls sstest</code></br>
 Nous n'avons pas les permissions de lectures du répertoire.</br>
-On en conclu qu'enlever les droit à un dossier applique le changement aux fichiers internes. Cependant on peut toujours retourner dans le répertoire courant car les droits sur celui-ci nous le permette.</br>
+On en conclu qu'enlever les droit à un dossier applique le changement aux fichiers internes.</br>
+Cependant on peut toujours retourner dans le répertoire courant car les droits sur celui-ci nous le permette.</br>
 
 ### Rétablissez le droit en exécution du répertoire test. Attribuez au fichier fichier les droits suffisants pour qu’une autre personne de votre groupe puisse y accéder en lecture, mais pas en écriture.
 <code> chmod 640 fichier </code></br>
@@ -227,28 +228,6 @@ umask 066 dir </code></br>
 chmod uo+w,g-rx fic = chmod 706 = chmod -rwx-x-rw- </code></br>
 
 ### Affichez les droits sur le programme passwd. Que remarquez-vous ? En affichant les droits du fichier /etc/passwd, pouvez-vous justifier les permissions sur le programme passwd ?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
