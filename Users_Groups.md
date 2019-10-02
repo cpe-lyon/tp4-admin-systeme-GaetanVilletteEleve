@@ -160,8 +160,8 @@ Cependant avec sudo il sera possible de l'éxécuter.</br>
 ### Placez-vous dans le répertoire test, et retirez-vous le droit en lecture pour ce répertoire. Listez le contenu du répertoire, puis exécutez ou affichez le contenu du fichier fichier. Qu’en déduisez-vous ? Rétablissez le droit en lecture sur test
 <code>sudo chmod u-r ../test
 ls 
-cat fichier</code></br>
-Comme one ne peut pas lister le contenu du repertoire ni voir le contenu du fichier on en deduit que les droits d'un repertoire sont supérieurs à ceux des fichiers internes.</br>
+cat fichier</code><br>
+Comme on ne peut pas lister le contenu du repertoire ni voir le contenu du fichier on en deduit que les droits d'un repertoire sont supérieurs à ceux des fichiers internes.</br>
 
 ### Créez dans test un fichier nouveau ainsi qu’un répertoire sstest. Retirez au fichier nouveau et au répertoire test le droit en écriture. Tentez de modifier le fichier nouveau. Rétablissez ensuite le droit en écriture au répertoire test. Tentez de modifier le fichier nouveau, puis de le supprimer. Que pouvez- vous déduire de toutes ces manipulations ?
 <code>touch nouveau
